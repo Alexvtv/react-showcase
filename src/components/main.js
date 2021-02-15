@@ -44,7 +44,7 @@ function Main(props) {
           }
         }
         return (
-          <div className="col-2 element" key={elem.courseId}>
+          <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 element" key={elem.courseId}>
             <div className="content">
               <img src="/noimg.png" />
               <div>

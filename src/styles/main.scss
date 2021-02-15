@@ -12,10 +12,11 @@
 	.element {
 		padding: 20px 10px;
 		.content {
+			margin: 0 auto;
 			overflow: hidden;
 			border-radius: 10px;
 			border: 1px solid #b5b5b5;
-			width: 100%;
+			width: 180px;
 			height: 260px;
 			img {
 				width: 100%;
@@ -71,5 +72,37 @@
 		font-weight: 300;
 		display: inline-block;
 		margin-bottom: 20px;
+	}
+}
+
+@media screen and (max-width: 1199px) {
+	.main {
+		width: 900px;
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.main {
+		width: 640px;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.main {
+		width: 430px;
+	}
+}
+
+@media screen and (max-width: 575px) {
+	.main {
+		width: 310px;
+		select {
+			margin-right: 30px;
+			width: 80px;
+		}
+		h3 {
+			float: right;
+			width: 160px;
+		}
 	}
 }

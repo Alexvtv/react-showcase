@@ -38,25 +38,25 @@ function Panel(props) {
 
   return (
     <div className="panel row">
-      <div className="col-3 panel-elem">
+      <div className="col-12 col-sm-4 col-md-3 panel-elem">
         <select value={props.subject} onChange={changeSubject}>
           <option value='default'>Все предметы</option>
           {optionList('subject')}
         </select>
       </div>
-      <div className="col-3 panel-elem">
+      <div className="col-12 col-sm-4 col-md-3 panel-elem">
         <select value={props.genre} onChange={changeGenre}>
           <option value='default'>Все жанры</option>
           {optionList('genre')}
         </select>
       </div>
-      <div className="col-3 panel-elem">
+      <div className="col-12 col-sm-4 col-md-3 panel-elem">
         <select value={props.grade} onChange={changeGrade}>
           <option value='default'>Все классы</option>
           {optionList('grade')}
         </select>
       </div>
-      <div className="col-3 panel-elem">
+      <div className="col-12 col-sm-12 col-md-3 panel-elem">
         <input value={props.inputValue} onChange={changeInputValue} />
       </div>
     </div>
