@@ -1,0 +1,19 @@
+.panel {
+	width: 1170px;
+	margin: 40px auto !important;
+	.panel-elem {
+		padding: 0 20px;
+		select {
+			border: 1px solid #706f6f;
+			width: 100%;
+			padding: 3px 5px;
+			border-radius: 5px;
+		}
+		input {
+			border: 1px solid #706f6f;
+			width: 100%;
+			padding: 3px 5px;
+			border-radius: 5px;
+		}
+	}
+}
