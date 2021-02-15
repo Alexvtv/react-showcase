@@ -14,14 +14,16 @@ function Main(props) {
     if(props.data.result === "Ok") {
 
       return props.data.items.map(elem => {
-        console.log(elem.grade.split(";"))
+
+        let gradeArr = elem.grade.split(";")
+
         if((props.subject !== 'default') && (props.subject !== elem.subject)) {
           return
         }
         if((props.genre !== 'default') && (props.genre !== elem.genre)) {
           return
         }
-        if((props.grade !== 'default') && (elem.grade.split(";").indexOf(props.grade) === -1)) {
+        if((props.grade !== 'default') && (gradeArr.indexOf(props.grade) === -1)) {
           return
         }
         if((props.inputValue !== '') && (elem.description.toLowerCase().indexOf(props.inputValue) === -1) && (elem.title.toLowerCase().indexOf(props.inputValue) === -1)) {
@@ -43,13 +45,22 @@ function Main(props) {
             )
           }
         }
+       
+        const grade = () => {
+          if(gradeArr.length === 1) {
+            return elem.grade
+          } else {
+            return `${gradeArr[0]}-${gradeArr[gradeArr.length - 1]}`
+          }
+        }
+
         return (
           <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 element" key={elem.courseId}>
             <div className="content">
               <img src="/noimg.png" />
               <div>
                 <p>{elem.subject}</p>
-                <p>{elem.grade} класс</p>
+                <p>{grade()} класс</p>
                 <p className="genre">{elem.genre}</p>
                 <a>Подробнее</a>
                 {priceButton()}
