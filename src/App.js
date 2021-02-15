@@ -37,7 +37,23 @@ function App() {
   if (error) {
     return <div>Ошибка: {error.message}</div>
   } else if (!isLoaded) {
-    return <div>Загрузка...</div>
+    return (
+      <div className="App">
+        <h2>Витрина</h2>
+        <Panel 
+          data={items} 
+          subject={subject}
+          setSubject={setSubject}
+          genre={genre}
+          setGenre={setGenre}
+          grade={grade}
+          setGrade={setGrade}
+          inputValue={inputValue}
+          setInputValue={setInputValue}
+        />
+        <div>Загрузка...</div>
+      </div>
+    )
   } else {
     return (
       <div className="App">
