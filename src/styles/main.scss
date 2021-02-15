@@ -24,8 +24,9 @@
 				object-fit: contain;
 			}
 			&>div {
+				text-align:left;
 				p {
-					margin: 0 20px;
+					margin: 0 25px;
 					font-size: 15px;
 				}
 				.genre {
@@ -35,7 +36,7 @@
 				a {	
 					color: #00c1ff;
 					display: block;
-					margin: 12px 0 9px 20px;	
+					margin: 12px 0 9px 25px;	
 					cursor: pointer;
 					font-size: 13px;
 					font-weight: 500;		
@@ -53,6 +54,10 @@
 					display: block;
 					margin: 0 auto;
 					width: 140px;
+					transition: background-color 0.2s;
+				}
+				button:hover {
+					background-color: #009fd4;
 				}
 			}
 		}
